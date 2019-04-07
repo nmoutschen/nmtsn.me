@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <header id="header">
-      <h1><router-link to="/">nmtsn<span>.me</span></router-link></h1>
+      <h1>
+        <router-link to="/">nmtsn<span>.me</span></router-link>
+      </h1>
       <!--<nav id="nav">
       </nav>-->
     </header>
@@ -28,14 +30,13 @@
   padding: 0px 4rem;
   height: 120px;
 
-
   h1 {
     margin: 0px;
 
     a {
       text-decoration: none;
       color: @primary-dark;
-      &:hover{
+      &:hover {
         color: @primary;
 
         span {
