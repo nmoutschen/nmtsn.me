@@ -77,6 +77,14 @@ export default {
 }
 
 main {
-  padding: 0px 6rem;
+  padding: 0px 2rem;
+
+  @media only screen and (min-width: 400px) {
+    padding: 0px 4rem;
+  }
+
+  @media only screen and (min-width: 640px) {
+    padding: 0px 6rem;
+  }
 }
 </style>

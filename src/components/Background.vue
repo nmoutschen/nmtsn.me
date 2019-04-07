@@ -34,7 +34,7 @@ export default {
       );
       sketch.frameRate(30);
       sketch.noStroke();
-      sketch.noiseSeed(Date.now().getUTCMilliseconds());
+      sketch.noiseSeed(Date.now());
     },
     draw(sketch) {
       let { width, height } = sketch;
