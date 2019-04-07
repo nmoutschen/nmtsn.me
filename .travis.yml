@@ -1,15 +1,9 @@
 language: node_js
 node_js:
-  - "8.6.0"
   - "node"
-env:
-  - WEBPACK_VERSION=
-  - WEBPACK_VERSION=4
 install:
   - if [[ `npm -v` != 5.7* ]]; then npm install -g npm@'>=5.7.1'; fi
   - npm ci
-before_script:
-  - if [[ -n "$WEBPACK_VERSION" ]]; then npm install --no-save webpack@WEBPACK_VERSION; fi
 branches:
   except:
     - gh-pages
@@ -28,3 +22,12 @@ jobs:
     - stage: build
       script:
         - npm run build
+        - echo nmtsn.me > dist/CNAME
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  on:
+    branch: master
+  local_dir: dist
+  target_branch: gh-pages
