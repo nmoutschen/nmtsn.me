@@ -43,9 +43,9 @@ export default {
   }
 
   a {
-    color: @primary-dark;
+    color: @primary;
     &:hover {
-      color: @primary;
+      color: @primary-light;
     }
   }
 }
