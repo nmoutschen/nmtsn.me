@@ -11,18 +11,11 @@ stages:
   - lint
   - test
   - build
-jobs:
-  include:
-    - stage: lint
-      script:
-        - npm run lint
-    - stage: test
-      script:
-        - npm run test:unit
-    - stage: build
-      script:
-        - npm run build
-        - echo nmtsn.me > dist/CNAME
+script:
+  - npm run lint
+  - npm run test:unit
+  - npm run build
+  - echo nmtsn.me > dist/CNAME
 deploy:
   provider: pages
   skip_cleanup: true
