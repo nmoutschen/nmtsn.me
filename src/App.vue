@@ -10,8 +10,17 @@
     <main>
       <router-view />
     </main>
+    <Background />
   </div>
 </template>
+
+<script>
+import Background from "@/components/Background.vue";
+
+export default {
+  components: {Background}
+}
+</script>
 
 <style lang="less">
 @import "common/base.less";
