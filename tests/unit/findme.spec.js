@@ -8,6 +8,5 @@ describe("FindMe", () => {
     const links = wrapper.findAll("a");
     expect(links.at(0).attributes("href")).to.include("github");
     expect(links.at(1).attributes("href")).to.include("linkedin");
-
   });
 });

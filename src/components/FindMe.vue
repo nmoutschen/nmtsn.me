@@ -3,7 +3,7 @@
     <ul class="contact">
       <li v-for="contact in contacts" v-bind:key="contact.link">
         <a v-bind:href="contact.link">
-          <font-awesome-icon v-bind:icon="['fab', contact.icon]" />
+          <i v-bind:class="'fab fa-' + contact.icon"></i>
         </a>
       </li>
     </ul>
@@ -50,7 +50,7 @@ export default {
   }
 }
 
-.svg-inline--fa {
+.fab {
   font-size: 1.5em;
 }
 </style>

@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import VueP5 from "vue-p5";
-
 export default {
   components: {
-    "vue-p5": VueP5
+    "vue-p5": function(resolve) {
+      require(["vue-p5"], resolve);
+    }
   },
   model: {
     event: "resize"
