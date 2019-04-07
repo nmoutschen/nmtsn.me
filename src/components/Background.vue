@@ -66,7 +66,7 @@ export default {
       }
 
       function getColor(x, y) {
-        return 0xf0 + (getNoise(x * 10, y * 10) + 0.5) * 0x08;
+        return 0xe8 + (getNoise(x * 10, y * 10) + 0.5) * 0x10;
       }
 
       for (let x = 0; x < width / this.triangleSize + 3; x++) {
