@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
+  <section id="home">
     <WhoAmI />
     <FindMe />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="less">
-.home section {
+#home section {
   margin-bottom: 2rem;
 }
 </style>
