@@ -1,0 +1,4 @@
+baseURL = "https://nmtsn.me/"
+languageCode = "en-us"
+title = "nmtsn.me"
+theme = "nmtsn.me"

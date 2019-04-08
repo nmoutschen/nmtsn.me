@@ -1,0 +1,115 @@
+/* BASE */
+
+body {
+  background-color: #F4F4F4;
+  font-family: 'Nanum Gothic Coding', monospace;
+  margin: 0px;
+  color: #373F51;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: 'Muli', sans-serif;
+  font-weight: 700;
+  color: #3E5D77;
+}
+
+/* BACKGROUND */
+
+.background {
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/* HEADER */
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 4rem;
+  height: 120px;
+
+}
+#header h1 {
+    margin: 0px;
+}
+
+#header h1 a {
+  text-decoration: none;
+  color: #3E5D77;
+}
+#header h1 a:hover {
+  color: #4889BF;
+}
+
+#header h1 a span {
+  color: #4889BF;
+}
+#header h1 a:hover span {
+  color: ##75B8EF
+}
+
+/* NAV */
+
+#nav {
+  padding: 10px;
+}
+#nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #4889BF;
+}
+#nav a:hover {
+  color: #75B8EF;
+}
+
+main {
+  padding: 0px 2rem;
+}
+@media only screen and (min-width: 400px) {
+  main {
+    padding: 0px 4rem;
+  }
+}
+@media only screen and (min-width: 640px) {
+  main {
+    padding: 0px 6rem;
+  }
+}
+
+/* HOME page */
+.home section {
+  margin-bottom: 2rem;
+}
+
+.home .whoami p::after {
+  content: "_";
+  color: #4889BF;
+}
+
+.home .contact {
+  list-style: none;
+  display: block;
+  padding: 0px;
+}
+.home .contact li {
+    display: inline-block;
+    padding: 0 5px;
+  }
+
+.home .contact a {
+  color: #4889BF;
+}
+.home .contact a:hover {
+  color: #75B8EF;
+}
+
+.home .contact .fab {
+  font-size: 1.5em;
+}
