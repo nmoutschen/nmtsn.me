@@ -1,3 +1,12 @@
+function toggleNav() {
+  let cur = document.getElementById("nav").style.display;
+  if (cur == "block") {
+    document.getElementById("nav").style.display = "none";
+  } else {
+    document.getElementById("nav").style.display = "block";
+  }
+}
+
 let triangleSize = Math.max(
   (window.innerWidth + window.innerHeight) / 20,
   100
@@ -8,12 +17,13 @@ function setup() {
   var background = createCanvas(window.innerWidth, window.innerHeight);
   background.class("background");
   frameRate(30);
-  noStroke();
+  stroke(0xF2, 0xAF, 0x29);
+  fill(0x47);
   noiseSeed(Date.now());
 };
 
 function draw() {
-  background(255);
+  background(0x47);
   t += 0.004;
 
   function getNoise(x, y) {
@@ -28,13 +38,9 @@ function draw() {
     return (y + getNoise(x + 1000, y + 1000) * 1.5 - 2) * triangleSize;
   }
 
-  function getColor(x, y) {
-    return 0xe8 + (getNoise(x * 10, y * 10) + 0.5) * 0x10;
-  }
 
-  for (let x = 0; x < width / triangleSize + 3; x++) {
-    for (let y = 0; y < height / triangleSize + 3; y++) {
-      fill(getColor(x, y));
+  for (let x = width / triangleSize + 2; x >= 0; x--) {
+    for (let y = height / triangleSize + 2; y >= 0; y--) {
       triangle(
         getX(x, y),
         getY(x, y),
@@ -43,7 +49,6 @@ function draw() {
         getX(x, y + 1),
         getY(x, y + 1)
       );
-      fill(getColor(x + 0.5, y + 0.5));
       triangle(
         getX(x + 1, y),
         getY(x + 1, y),
@@ -58,4 +63,7 @@ function draw() {
 
 window.onresize = function() {
   resizeCanvas(window.innerWidth, window.innerHeight);
+  if (window.innerWidth >= 780 && document.getElementById("nav").style.display != "block") {
+    document.getElementById("nav").style.display = "block";
+  }
 };

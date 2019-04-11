@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <main class="post">
-        {{- block "main" . }}{{- end }}
-        </main>
-    </body>
+<head>
+  <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+  {{- partial "head.html" . -}}
+</head>
+<body class="page-home">
+  <nav id="nav">
+    <header>
+      <h1><a href="{{ .Site.BaseURL }}">nmtsn.me</a></h1>
+      <div class="nav-button"><a href="javascript:void(0)" onclick="toggleNav()"><i class="fas fa-times"></i></a></div>
+    </header>
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+  <main>
+    <header>
+      <h1><a href="{{ .Site.BaseURL }}">nmtsn.me</a></h1>
+      <div class="nav-button"><a href="javascript:void(0)" onclick="toggleNav()"><i class="fas fa-bars"></i></a></div>
+    </header>
+    {{- block "main" . }}{{- end }}
+  </main>
+</body>
 </html>

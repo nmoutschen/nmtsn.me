@@ -1,15 +1,14 @@
+{{ define "title" }}
+{{ .Site.Title }} &mdash; {{ .Title }}
+{{ end }}
+
 {{ define "main" }}
-  <section class="posts">
-    <h2>{{ .Title }}</h2>
-    <div class="content">
-      {{ .Content }}
-    </div>
-    <ul>
-      {{ range .Pages }}
-      <li>
-        <a href="{{.Permalink}}"><span class="date">{{.Date.Format "2006-01-02"}}</span> {{.Title}}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </section>
+<h2>{{ .Title }}</h2>
+
+{{ .Content }}
+<ul class="posts">
+  {{ range .Pages }}
+  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+  {{ end }}
+<ul>
 {{ end }}
