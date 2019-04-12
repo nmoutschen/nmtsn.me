@@ -3,7 +3,9 @@
 {{ end }}
 
 {{ define "main" }}
+<header>
 <h2>{{ .Title }}</h2>
-
+<p class="date">{{ .Date.Format "2006-01-02" }}</p>
+</header>
 {{ .Content }}
 {{ end }}

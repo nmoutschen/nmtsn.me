@@ -6,5 +6,3 @@ menu:
   main:
     weight: -100
 ---
-
-Nothing to see here right now.

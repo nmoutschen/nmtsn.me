@@ -6,10 +6,6 @@
 </head>
 <body class="page-home">
   <nav id="nav">
-    <header>
-      <h1><a href="{{ .Site.BaseURL }}">nmtsn.me</a></h1>
-      <div class="nav-button"><a href="javascript:void(0)" onclick="toggleNav()"><i class="fas fa-times"></i></a></div>
-    </header>
     <ul>
       {{ range .Site.Menus.main }}
       <li><a href="{{ .URL }}">{{ .Name }}</a></li>

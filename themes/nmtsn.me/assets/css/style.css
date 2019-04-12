@@ -27,6 +27,11 @@ h1, strong {
 
 h2, h3 {
   font-weight: 300;
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
 }
 
 header {
@@ -148,15 +153,15 @@ canvas {
     flex-direction: row-reverse;
     justify-content: center;
     margin: auto;
+    height: auto;
+    min-height: 100%;
   }
 
   nav {
     display: block;
     position: relative;
-    width: 25%;
-    height: 50%;
-    max-width: 256px;
-    max-height: 512px;
+    width: 33.33%;
+    max-width: 341px;
     border-bottom: 1px solid #F2AF29;
     border-right: 1px solid #F2AF29;
   }
@@ -168,10 +173,10 @@ canvas {
   }
 
   main {
-    width: 50%;
-    height: 100%;
-    max-width: 512px;
-    border-bottom: 0px;
+    width: 66.67%;
+    min-height: 100%;
+    max-width: 683px;
+    border: 1px solid #F2AF29;
   }
 
   main p {
@@ -192,4 +197,9 @@ main .alert {
 
 main .alert a {
   color: #ffffff;
+}
+
+main .summary header {
+  align-items: center;
+  padding-bottom: 12px;
 }
