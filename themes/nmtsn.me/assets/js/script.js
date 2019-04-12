@@ -1,3 +1,9 @@
+let triangleSize = Math.max(
+  (window.innerWidth + window.innerHeight) / 20,
+  100
+);
+let t = 0;
+
 function toggleNav() {
   let cur = document.getElementById("nav").style.display;
   if (cur == "block") {
@@ -6,12 +12,6 @@ function toggleNav() {
     document.getElementById("nav").style.display = "block";
   }
 }
-
-let triangleSize = Math.max(
-  (window.innerWidth + window.innerHeight) / 20,
-  100
-);
-let t = 0;
 
 function setup() {
   var background = createCanvas(window.innerWidth, window.innerHeight);
@@ -59,6 +59,14 @@ function draw() {
       );
     }
   }
+};
+
+window.onload = function() {
+  let header = document.getElementsByTagName("header")[0];
+  let nav = document.getElementById("nav");
+  let navHeader = header.cloneNode(true);
+  navHeader.getElementsByTagName("i")[0].setAttribute("class", "fas fa-times");
+  nav.insertBefore(navHeader, nav.firstChild);
 };
 
 window.onresize = function() {

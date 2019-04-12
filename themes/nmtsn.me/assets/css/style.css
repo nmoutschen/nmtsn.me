@@ -21,8 +21,12 @@ a:hover {
   color: #2e2e2e;
 }
 
-h1, h2, h3, strong {
+h1, strong {
   font-weight: 600;
+}
+
+h2, h3 {
+  font-weight: 300;
 }
 
 header {
@@ -105,13 +109,14 @@ main {
 }
 
 main > *, nav > * {
-  padding: 0px 30px 12px 30px;
+  padding: 14px 30px 26px 30px;
+  margin: 0px;
 }
 main > *:last-child, nav > *:last-child {
-  padding: 0px 30px 30px 30px;
+  padding: 14px 30px 30px 30px;
 }
 main > *:first-child, nav > *:first-child {
-  padding: 30px 30px 12px 30px;
+  padding: 30px 30px 26px 30px;
 }
 
 canvas {
@@ -127,13 +132,13 @@ canvas {
   }
 
   main > *, nav > * {
-    padding: 0px 60px 12px 60px;
+    padding: 14px 60px 26px 60px;
   }
   main > *:last-child, nav > *:last-child {
-    padding: 0px 60px 60px 60px;
+    padding: 14px 60px 60px 60px;
   }
   main > *:first-child, nav > *:first-child {
-    padding: 30px 60px 12px 60px;
+    padding: 30px 60px 26px 60px;
   }
 }
 
@@ -176,4 +181,15 @@ canvas {
   .nav-button {
     display: none;
   }
+}
+
+main .alert {
+  display: block;
+  background-color: #AD343E;
+  color: #f4f4f4;
+  padding-top: 26px;
+}
+
+main .alert a {
+  color: #ffffff;
 }
