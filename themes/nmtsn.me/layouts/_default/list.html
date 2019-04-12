@@ -7,13 +7,6 @@
 
 {{ .Content }}
 
-
-<!--<ul class="posts">
-  {{ range .Pages }}
-  <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-  {{ end }}
-<ul>-->
-
 {{ if ( eq ( len .Pages ) 0)}}
 <p>Nothing to see here.</p>
 {{ else }}
