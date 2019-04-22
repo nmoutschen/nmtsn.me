@@ -88,8 +88,23 @@ nav {
 
   ul {
     list-style: none;
-    padding: 80px 0px 40px 0px;
     margin: 0px;
+  }
+
+  .links {
+    padding: 80px 0px 0px 0px;
+  }
+  .social {
+    padding: 10px 0px 40px 0px;
+    li {
+      display: inline;
+    }
+    a {
+      color: $color-secondary;
+      &:hover {
+        color: $color-text;
+      }
+    }
   }
   a {
     display: inline-block;
@@ -110,4 +125,8 @@ nav {
     border-top: 30px solid $color-background;
     margin-left: -60px;
   }
+}
+
+.hidden {
+  display: none;
 }

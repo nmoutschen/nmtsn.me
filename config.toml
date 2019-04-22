@@ -2,3 +2,23 @@ baseURL = "https://nmtsn.me/"
 languageCode = "en-us"
 title = "nmtsn.me"
 theme = "nmtsn.me"
+
+[menu]
+
+  [[menu.social]]
+    name = "Github"
+    url = "https://github.com/nmoutschen"
+    pre = "<i class=\"fab fa-github\"></i> "
+    weight = -100
+
+  [[menu.social]]
+    name = "Linkedin"
+    url = "https://www.linkedin.com/in/nicolas-moutschen-6906a337/"
+    pre = "<i class=\"fab fa-linkedin\"></i> "
+    weight = -90
+
+  [[menu.social]]
+    name = "Instagram"
+    url = "https://www.instagram.com/nmoutschen/"
+    pre = "<i class=\"fab fa-instagram\"></i> "
+    weight = -80

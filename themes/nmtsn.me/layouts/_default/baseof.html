@@ -11,9 +11,14 @@
   </header>
   <main>{{- block "main" . }}{{- end }}</main>
   <nav>
-    <ul>
+    <ul class="links">
       {{ range .Site.Menus.main }}
       <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+    <ul class="social">
+      {{ range .Site.Menus.social }}
+      <li><a href="{{ .URL }}">{{ .Pre }}<span class="hidden">{{ .Name }}</span></a></li>
       {{ end }}
     </ul>
   </nav>
