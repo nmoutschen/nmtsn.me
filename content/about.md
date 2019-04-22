@@ -15,4 +15,4 @@ This website is a collection of [side-projects](/projects/), experimentations an
 
 I am a Solutions Architect at [Amazon Web Services](https://aws.amazon.com/) who lives in Stockholm, Sweden. I help customers design cloud-native architectures. If you’re looking for best-practices, I highly recommend you to read the [Well-Architected Framework whitepapers](https://aws.amazon.com/architecture/well-architected/).
 
-My main area of interest is around serverless technologies, how they can help innovate faster while reducing operational burden and responsibility.
+My main area of interest is around serverless technologies and how they can help innovate faster while reducing operational burden.
