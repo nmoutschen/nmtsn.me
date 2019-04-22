@@ -2,6 +2,7 @@
 title: "nmtsn.me"
 date: 2019-04-22T11:53:00+02:00
 draft: false
+category: frontend
 summary: |
   My personal website running Hugo. Working a lot with backend systems, I wanted to refresh my knowledge of frontend design.
 ---

@@ -1,0 +1,25 @@
+{{ define "title" }}
+{{ .Title }} | {{ .Site.Title }}
+{{ end }}
+{{ define "pagetitle" }}
+{{ .Title }}
+{{ end }}
+{{ define "pageclass" }}
+class="page"
+{{ end }}
+{{ define "main" }}
+{{ .Content }}
+  {{ range .Pages.GroupByParam "category" }}
+  <h2>{{ .Key | title }}</h2>
+  <div class="articles">
+    {{ range .Pages }}
+    <article class="summary">
+    <header>
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    </header>
+    <p>{{ .Summary }}</p>
+    </article>
+    {{ end }}
+  </div>
+  {{ end }}
+{{ end }}
