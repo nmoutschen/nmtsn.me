@@ -10,17 +10,9 @@ branches:
   except:
     - gh-pages
 
-install:
-  - mkdir $HOME/src
-  - cd $HOME/src
-  - git clone https://github.com/gohugoio/hugo.git
-  - cd hugo
-  - git checkout 1477fb3 # checkout release v0.55.3
-  - go get github.com/magefile/mage
-  - go mod download
-  - mage -v hugo
-  - ./hugo version
-  - pwd
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install hugo
 
 before_script:
   - rm -rf public 2> /dev/null
