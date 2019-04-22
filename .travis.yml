@@ -1,11 +1,26 @@
 language: go
 go:
   - 1.11.x
+
+env:
+  global:
+    - HUGO_BUILD_TAGS="extended"
+
 branches:
   except:
     - gh-pages
+
 install:
-  - go get github.com/gohugoio/hugo
+  - mkdir $HOME/src
+  - cd $HOME/src
+  - git clone https://github.com/gohugoio/hugo.git
+  - cd hugo
+  - git checkout 1477fb3 # checkout release v0.55.3
+  - go get github.com/magefile/mage
+  - go mod download
+  - mage -v hugo
+  - ./hugo version
+  - pwd
 
 before_script:
   - rm -rf public 2> /dev/null
