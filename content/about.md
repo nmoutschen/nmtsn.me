@@ -9,7 +9,7 @@ menu:
 
 I am a builder and solutions architect who loves to tinker, learn and build things. I am passionate about serverless technologies and software architecture patterns.
 
-This website is a collection of [side-projects](/projects/), experimentations and various resources that can be useful for other builders.
+This website is a collection of [side-projects](/projects/), experimentations and various resources that can be useful for other builders. Opinions on this website are my own.
 
 ## What do I do?
 
