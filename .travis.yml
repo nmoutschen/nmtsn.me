@@ -2,17 +2,13 @@ language: go
 go:
   - 1.11.x
 
-env:
-  global:
-    - HUGO_BUILD_TAGS="extended"
-
 branches:
   except:
     - gh-pages
 
-before_install:
-  - sudo apt-get update
-  - sudo apt-get -y install hugo
+install:
+  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.55.3/hugo_0.55.3_Linux-64bit.deb
+  - sudo dpkg -i /tmp/hugo.deb
 
 before_script:
   - rm -rf public 2> /dev/null
