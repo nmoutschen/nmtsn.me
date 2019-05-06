@@ -13,7 +13,7 @@ theme = "nmtsn.me"
 
   [[menu.social]]
     name = "Linkedin"
-    url = "https://www.linkedin.com/in/nicolas-moutschen-6906a337/"
+    url = "https://www.linkedin.com/in/nmoutschen/"
     pre = "<i class=\"fab fa-linkedin\"></i> "
     weight = -90
 
