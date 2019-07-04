@@ -106,6 +106,15 @@ main {
       }
     }
   }
+
+  .camera {
+    text-align: center;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 body.home main p {
   font-size: 32px;

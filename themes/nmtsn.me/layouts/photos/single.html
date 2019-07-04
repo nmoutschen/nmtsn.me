@@ -2,13 +2,21 @@
 {{ .Title }} | {{ .Site.Title }}
 {{ end }}
 {{ define "pagetitle" }}
-<a href="/photos/">Photos</a>
+{{ .Title }}
 {{ end }}
 {{ define "main" }}
 <div class="photo"><img src="{{ .Params.img }}" class="photo" /></div>
-{{ if (isset .Params "camera") }}
-<p class="camera"><i class="fas fa-camera-retro"></i> {{ .Params.camera }}{{ if (isset .Params "film") }}, with {{ .Params.film }}{{ end }}</p>
+{{ if .Params.camera }}
+<p class="camera"><i class="fas fa-camera-retro"></i> {{ .Params.camera }}{{ if .Params.film }}, with {{ .Params.film }}{{ end }}</p>
 {{ end }}
 {{ .Content }}
-<p class="back"><a href="/photos/"><i class="fas fa-backward"></i> Go back</a></p>
+<div class="pagination">
+  {{ if .NextInSection }}
+  <p><a href="{{ .NextInSection.Permalink }}"><i class="fas fa-arrow-left"></i> {{ .NextInSection.Title }}</a></p>
+  {{ end }}
+  <p class="back"><a href="/photos/"><i class="fas fa-undo"></i> Go back</a></p>
+  {{ if .PrevInSection }}
+  <p><a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }} <i class="fas fa-arrow-right"></i></a></p>
+  {{ end }}
+</div>
 {{ end }}
