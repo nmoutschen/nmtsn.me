@@ -9,11 +9,14 @@ class="page"
 {{ end }}
 {{ define "main" }}
 {{ .Content }}
-<div class="articles">
-  {{ range .Pages }}
-  <article class="summary">
-  <a href="{{ .Permalink }}"><img src="{{ .Params.img }}" class="photo" /></a>
-  </article>
+  {{ range .Pages.GroupByDate "Jan 2006" }}
+  <h2>{{ .Key }}</h2>
+  <div class="articles">
+    {{ range .Pages }}
+    <article class="summary">
+    <a href="{{ .Permalink }}"><img src="{{ .Params.img }}" class="photo" /></a>
+    </article>
+    {{ end }}
+  </div>
   {{ end }}
-</div>
 {{ end }}
