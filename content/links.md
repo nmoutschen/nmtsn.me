@@ -2,9 +2,6 @@
 title: "Links"
 date: 2019-04-22T08:00:00+02:00
 draft: false
-menu:
-  main:
-    weight: -100
 ---
 
 This is a collection of useful resources such as videos, articles, etc. related to various software-related topics.
