@@ -11,12 +11,12 @@
 {{ end }}
 {{ .Content }}
 <div class="pagination">
-  {{ if .NextInSection }}
-  <p><a href="{{ .NextInSection.Permalink }}"><i class="fas fa-arrow-left"></i> {{ .NextInSection.Title }}</a></p>
-  {{ end }}
+  <p>{{ if .NextInSection }}
+  <a href="{{ .NextInSection.Permalink }}"><i class="fas fa-arrow-left"></i> {{ .NextInSection.Title }}</a>
+  {{ end }}</p>
   <p class="back"><a href="/photos/"><i class="fas fa-undo"></i> Go back</a></p>
-  {{ if .PrevInSection }}
-  <p><a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }} <i class="fas fa-arrow-right"></i></a></p>
-  {{ end }}
+  <p>{{ if .PrevInSection }}
+  <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }} <i class="fas fa-arrow-right"></i></a>
+  {{ end }}</p>
 </div>
 {{ end }}

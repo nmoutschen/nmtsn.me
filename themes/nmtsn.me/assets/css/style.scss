@@ -114,6 +114,10 @@ main {
   .pagination {
     display: flex;
     justify-content: space-around;
+    p {
+      flex-basis: 100%;
+      text-align: center;
+    }
   }
 }
 body.home main p {
