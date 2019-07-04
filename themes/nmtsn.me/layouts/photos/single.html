@@ -1,0 +1,14 @@
+{{ define "title" }}
+{{ .Title }} | {{ .Site.Title }}
+{{ end }}
+{{ define "pagetitle" }}
+<a href="/photos/">Photos</a>
+{{ end }}
+{{ define "main" }}
+<div class="photo"><img src="{{ .Params.img }}" class="photo" /></div>
+{{ if (isset .Params "camera") }}
+<p class="camera"><i class="fas fa-camera-retro"></i> {{ .Params.camera }}{{ if (isset .Params "film") }}, with {{ .Params.film }}{{ end }}</p>
+{{ end }}
+{{ .Content }}
+<p class="back"><a href="/photos/"><i class="fas fa-backward"></i> Go back</a></p>
+{{ end }}

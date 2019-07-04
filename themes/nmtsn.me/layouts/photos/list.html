@@ -1,0 +1,19 @@
+{{ define "title" }}
+{{ .Title }} | {{ .Site.Title }}
+{{ end }}
+{{ define "pagetitle" }}
+{{ .Title }}
+{{ end }}
+{{ define "pageclass" }}
+class="page"
+{{ end }}
+{{ define "main" }}
+{{ .Content }}
+<div class="articles">
+  {{ range .Pages }}
+  <article class="summary">
+  <a href="{{ .Permalink }}"><img src="{{ .Params.img }}" class="photo" /></a>
+  </article>
+  {{ end }}
+</div>
+{{ end }}

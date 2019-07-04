@@ -1,10 +1,10 @@
 ---
 title: "About me"
-date: 2019-04-22T08:26:50+02:00
+date: 2019-04-22T08:00:00+02:00
 draft: false
 menu:
   main:
-    weight: -120
+    weight: -130
 ---
 
 I am a builder and solutions architect who loves to tinker, learn and build things. I am passionate about serverless technologies and software architecture patterns.
