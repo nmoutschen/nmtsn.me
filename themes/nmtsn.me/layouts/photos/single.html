@@ -4,6 +4,7 @@
 {{ define "pagetitle" }}
 {{ .Title }}
 {{ end }}
+{{ define "pageclass" }} class="photo"{{ end }}
 {{ define "main" }}
 <div class="photo"><img src="{{ .Params.img }}" class="photo" /></div>
 {{ if .Params.camera }}

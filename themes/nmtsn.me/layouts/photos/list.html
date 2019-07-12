@@ -4,9 +4,7 @@
 {{ define "pagetitle" }}
 {{ .Title }}
 {{ end }}
-{{ define "pageclass" }}
-class="page"
-{{ end }}
+{{ define "pageclass" }} class="photos"{{ end }}
 {{ define "main" }}
 {{ .Content }}
   {{ range .Pages.GroupByDate "Jan 2006" }}

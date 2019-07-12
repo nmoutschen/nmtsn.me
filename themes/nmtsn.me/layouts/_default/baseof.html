@@ -4,12 +4,12 @@
   <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
   {{- partial "head.html" . -}}
 </head>
-<body {{- block "pageclass" . }}{{- end}}>
+<body>
   <header>
     <h1><a href="{{ .Site.BaseURL }}">nmtsn.me</a></h1>
     <h2>{{- block "pagetitle" . }}{{- end }}</h2>
   </header>
-  <main>{{- block "main" . }}{{- end }}</main>
+  <main{{- block "pageclass" . }}{{- end}}>{{- block "main" . }}{{- end }}</main>
   <nav>
     <ul class="links">
       {{ range .Site.Menus.main }}
