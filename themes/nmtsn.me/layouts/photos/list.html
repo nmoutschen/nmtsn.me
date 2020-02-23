@@ -7,7 +7,7 @@
 {{ define "pageclass" }} class="photos"{{ end }}
 {{ define "main" }}
 {{ .Content }}
-  {{ range .Pages.GroupByDate "Jan 2006" }}
+  {{ range .Pages.GroupByDate "2006" }}
   <h2>{{ .Key }}</h2>
   <div class="articles">
     {{ range .Pages }}
